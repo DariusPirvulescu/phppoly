@@ -11,27 +11,19 @@ out_filename = 'avatar'
 usage_string = 'Usage: ./phppoly <destination_jpg_file> <source_php_file>'
 
 # Validation
-if ARGV.length != 2
-  puts usage_string
-  exit
-end
+abort usage_string if ARGV.length != 2
 
 # Check if destination is not JPG
 unless %w[.jpg .jpeg].include? File.extname(jpg_filepath)
-  puts "Destination file extension must be .jpg or .jpeg\n#{usage_string}"
-  exit
+  abort "Destination file extension must be .jpg or .jpeg\n#{usage_string}"
 end
 
 # Check if source is not PHP
-unless %w[.php].include? File.extname(php_filepath)
-  puts "Destination file extension must be .php\n#{usage_string}"
-  exit
+unless File.extname(php_filepath) == '.php'
+  abort "Destination file extension must be .php\n#{usage_string}"
 end
 
-if php_code == ''
-  puts "PHP file cannot be empty\n#{usage_string}"
-  exit
-end
+abort "PHP file cannot be empty\n#{usage_string}" if php_code == ''
 
 def bin_to_hex(buff)
   buff.unpack('H*').first.scan(/../)

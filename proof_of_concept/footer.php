@@ -10,7 +10,7 @@
   bottom: 0;
   right: 0;
   left: 0;">
-  <a href="#" target="_blank">
+  <a href="https://github.com/DariusPirvulescu/phppoly" target="_blank">
     <img
       style="width: 30px;height: 30px;"
       src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" />

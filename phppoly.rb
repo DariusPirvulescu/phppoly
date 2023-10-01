@@ -2,7 +2,7 @@
 
 # Adds contents of a PHP file into a JPG image
 # Usage ./phppoly <jpg_filepath> <php_filepath>
-# TODO: change - Will create a out.php file
+# It will create two files in both JPG and PHP format (name configured by `out_filename`)
 
 jpg_filepath = ARGV[0]
 php_filepath = ARGV[1]
@@ -25,6 +25,7 @@ end
 
 abort "PHP file cannot be empty\n#{usage_string}" if php_code == ''
 
+# Helper functions
 def bin_to_hex(buff)
   buff.unpack('H*').first.scan(/../)
 end
@@ -45,6 +46,7 @@ end
 
 out = []
 
+# Init file read
 File.open(jpg_filepath, 'rb') do |file|
   jpg_buffer = file.read
   hex_rep = bin_to_hex(jpg_buffer)

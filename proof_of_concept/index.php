@@ -2,7 +2,7 @@
 
 <?php
   // PHP file
-  echo "<h3>Polyglot file as .php</h3>";
+  echo "<h2>Polyglot file as .php</h2>";
   if (file_exists('avatar.php')) {
     echo 'Avatar (with injected PHP code): <br/>';
     echo '<img src="avatar.php"/>';
@@ -23,7 +23,7 @@
 
 <?php
   // JPG file
-  echo "<h3>Polyglot file as .jpg</h3>";
+  echo "<h2>Polyglot file as .jpg</h2>";
 
   if (file_exists('avatar.jpg')) {
     echo 'Avatar JPG: <br/>';

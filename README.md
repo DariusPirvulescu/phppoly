@@ -1,7 +1,21 @@
 # phppoly
 
+Script to create a polyglot files. It combines the content of a PHP file into an existing JPG image.
+
+## Running the script
 
 ```
-ruby phppoly.rb dest.jpg my_php_exploit.php
+ruby phppoly.rb test.jpg my_php_exploit.php
 ```
+
+This will not affect the input file. If successful, it will create two new files in both JPG and PHP format. Output file names can be configured by changing the `out_filename` variable's value (*avatar* by default).
+
+Copy the two new files to the POC folder.
+```
+cp avatar.jpg avatar.php proof_of_concept
+```
+
+There's a Proof of Concept created, more info on the [POC README.md](https://github.com/DariusPirvulescu/phppoly/blob/main/proof_of_concept/README.md).
+
+Inspired by https://github.com/Wuelle/js_jpeg_polyglot
 

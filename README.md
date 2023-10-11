@@ -1,6 +1,9 @@
 # phppoly
 
-Script to create a polyglot files. It combines the content of a PHP file with an existing JPG image.
+Script to create polyglot files. It combines the content of a PHP file with an existing JPG image.
+
+More details on how this is used:  
+https://dariuspirvulescu.github.io/blog/an-intro-to-polyglot-files/
 
 ## Running the script
 
